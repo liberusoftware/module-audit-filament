@@ -6,7 +6,7 @@ namespace Liberu\Foundation\AuditFilament;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Liberu\Foundation\AuditFilament\Resources\ActivityLogResource;
+use Liberu\Foundation\AuditFilament\Pages\Overview;
 
 final class AuditFilamentPlugin implements Plugin
 {
@@ -22,7 +22,7 @@ final class AuditFilamentPlugin implements Plugin
 
     public function register(Panel $panel): void
     {
-        $panel->resources([ActivityLogResource::class]);
+        $panel->pages([Overview::class]);
     }
 
     public function boot(Panel $panel): void {}
